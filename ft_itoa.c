@@ -1,6 +1,6 @@
 #include "stdlib.h"
 
-static int get_length(int n)
+static int  get_length(int n)
 {
     int length = 0;
 
@@ -16,7 +16,7 @@ static int get_length(int n)
     return length;
 }
 
-char *ft_itoa(int n)
+char*   ft_itoa(int n)
 {
     int length;
     char *str;
