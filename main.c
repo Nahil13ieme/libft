@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nbenhami <nbenhami@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/06 15:25:30 by nbenhami          #+#    #+#             */
+/*   Updated: 2024/11/06 15:53:30 by nbenhami         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 #include <stdio.h>
@@ -33,9 +45,9 @@ void print_memory(const char *label, const void *mem, size_t n) {
 
 void	test_bzero()
 {
-	char test1[10] = "123456789";
-    char test2[10] = "abcdefghi";
-    char test3[10] = "hello";
+	char    test1[10] = "123456789";
+    char    test2[10] = "abcdefghi";
+    char    test3[10] = "hello";
 
     print_memory("Avant ft_bzero (test1)", test1, sizeof(test1));
     ft_bzero(test1, 5);  // Zéro les 5 premiers octets
