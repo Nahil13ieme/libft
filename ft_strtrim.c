@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbenhami <nbenhami@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:25:09 by nbenhami          #+#    #+#             */
-/*   Updated: 2024/11/06 16:06:49 by nbenhami         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:09:10 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char *s1, char *set)
 {
-	const char	*start;
-	const char	*end;
+	char	*start;
+	char	*end;
 	char		*trimmed;
 	size_t		i;
 
@@ -31,7 +31,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (trimmed == NULL)
 		return (NULL);
 	i = 0;
-	while (i < (end - start + 1))
+	while (i < (size_t)(end - start + 1))
 	{
 		trimmed[i] = start[i];
 		i++;

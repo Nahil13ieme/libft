@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nbenhami <nbenhami@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:25:12 by nbenhami          #+#    #+#             */
-/*   Updated: 2024/11/06 15:58:37 by nbenhami         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:08:21 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char *s, unsigned int start, size_t len)
 {
-	int		i;
+	unsigned int		i;
 	char	*cpy;
-	int		str_length;
+	unsigned int		str_length;
 
 	str_length = ft_strlen(s);
 	cpy = (char *)malloc(sizeof(*cpy) * (str_length + 1));
