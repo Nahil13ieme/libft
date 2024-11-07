@@ -23,11 +23,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s_len = ft_strlen(s);
 	if (start >= s_len)
 		len = 0;
+	else if (s_len < start + len)
+		len = s_len - start;
 	substr = malloc(sizeof(char) * (len + 1));
 	if (!substr)
 		return (NULL);
 	i = 0;
-	while (s[i + start] && i < len)
+	while (i < len)
 	{
 		substr[i] = s[i + start];
 		i++;
