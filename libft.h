@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:08:00 by nbenhami          #+#    #+#             */
-/*   Updated: 2024/11/07 12:20:17 by marvin           ###   ########.fr       */
+/*   Updated: 2024/11/07 16:30:24 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ char			*ft_strnstr(char *haystack, char *needle, size_t n);
 char			*ft_strrchr(char *s, int c);
 char			*ft_strtrim(char  *s1, char *set);
 char			*ft_substr(char *s, unsigned int start, size_t len);
-char			*ft_tolower(char *str);
-char			*ft_toupper(char *str);
+int				ft_tolower(int c);
+int				ft_toupper(int c);
 
 #endif
