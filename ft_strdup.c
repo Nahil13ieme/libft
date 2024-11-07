@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:24:21 by nbenhami          #+#    #+#             */
-/*   Updated: 2024/11/07 12:07:31 by marvin           ###   ########.fr       */
+/*   Updated: 2024/11/07 14:03:38 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ char	*ft_strdup(char *s)
 	if (copy == NULL)
 		return (NULL);
 	while (*s)
-	{
 		*copy++ = *s++;
-	}
 	*copy = '\0';
-	return (copy - len - 1);
+	return (copy - len);
 }

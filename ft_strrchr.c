@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:25:02 by nbenhami          #+#    #+#             */
-/*   Updated: 2024/11/07 12:04:59 by marvin           ###   ########.fr       */
+/*   Updated: 2024/11/07 13:55:45 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,7 @@ char	*ft_strrchr(char *s, int c)
 		}
 		s++;
 	}
+	if ( c == '\0')
+		return (s);
 	return ((char *)last_occurrence);
 }

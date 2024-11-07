@@ -6,7 +6,7 @@
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:18:33 by nbenhami          #+#    #+#             */
-/*   Updated: 2024/11/07 12:06:49 by marvin           ###   ########.fr       */
+/*   Updated: 2024/11/07 13:57:50 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi(char *str)
 
 	sign = 1;
 	result = 0;
-	while (*str == ' ')
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-' || *str == '+')
 	{
