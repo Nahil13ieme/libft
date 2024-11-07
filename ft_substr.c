@@ -27,7 +27,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!substr)
 		return (NULL);
 	i = 0;
-	while(s[i + start] && i < len)
+	while (s[i + start] && i < len)
 	{
 		substr[i] = s[i + start];
 		i++;
