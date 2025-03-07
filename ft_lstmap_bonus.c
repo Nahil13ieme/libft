@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nbenhami <nbenhami@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:59:24 by nbenhami          #+#    #+#             */
-/*   Updated: 2024/11/08 15:54:27 by nbenhami         ###   ########.fr       */
+/*   Updated: 2024/11/10 19:43:31 by nbenhami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,24 @@
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
-	t_list	*first_elem;
+	t_list	*head;
+	void	*content;
 
-	if (!lst || !f || !del)
-		return (NULL);
-	new_lst = ft_lstnew(f(lst->content));
-	if (!new_lst)
-		return (NULL);
-	lst = lst->next;
-	first_elem = new_lst;
+	head = NULL;
 	while (lst)
 	{
-		new_lst->next = ft_lstnew(f(lst->content));
-		if (new_lst->next == NULL)
+		content = f(lst->content);
+		new_lst = ft_lstnew(content);
+		if (!new_lst)
 		{
-			ft_lstclear(&first_elem, del);
+			del(content);
+			ft_lstclear(&head, del);
 			return (NULL);
 		}
+		ft_lstadd_back(&head, new_lst);
 		lst = lst->next;
 		new_lst = new_lst->next;
 	}
-	new_lst->next = NULL;
-	return (first_elem);
+	new_lst = NULL;
+	return (head);
 }
